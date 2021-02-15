@@ -19,7 +19,7 @@ public class HashingMD5 {
         try {
             // memanggil Hash MD5
             MessageDigest md = MessageDigest.getInstance("MD5");
-            // memasukkan inputan ke MD untuk hashing dengan ditampung pada array byte 
+            // memasukkan inputan ke MD5 untuk hashing dengan ditampung pada array byte 
             byte[] messageDiggest = md.digest(input.getBytes());
             // mengubah array byte hashing menjadi BigInteger
             BigInteger bigInteger = new BigInteger(1, messageDiggest);
