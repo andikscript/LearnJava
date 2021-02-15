@@ -17,9 +17,13 @@ public class HashingMD5 {
     
     private String getMD5(String input) {
         try {
+            // memanggil Hash MD5
             MessageDigest md = MessageDigest.getInstance("MD5");
+            // memasukkan inputan ke MD untuk hashing dengan ditampung pada array byte 
             byte[] messageDiggest = md.digest(input.getBytes());
+            // mengubah array byte hashing menjadi BigInteger
             BigInteger bigInteger = new BigInteger(1, messageDiggest);
+            // mengubah hashing dari BigInteger ke nilai hexadecimal
             String hashText = bigInteger.toString(16);
             while(hashText.length() < 32) {
                 hashText = "0" + hashText;
